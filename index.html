@@ -4,139 +4,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07141d">
+    <meta name="description" content="Samir Maia — desenvolvedor web focado em front-end, back-end, APIs e soluções digitais para negócios e projetos pessoais.">
+    <meta property="og:title" content="Samir Maia | Desenvolvedor Web">
+    <meta property="og:description" content="Projetos, conhecimentos e soluções digitais para presença online e crescimento de negócios.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/preview.jpg">
 
-    <title>Samir Maia | Desenvolvedor</title>
-
-    <meta
-        name="description"
-        content="Samir Maia - Desenvolvimento Web, Front-end, Back-end e soluções digitais."
-    >
+    <title>Samir Maia | Desenvolvedor Web</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
-
     <header class="header">
-
         <div class="container nav">
+            <a href="#inicio" class="logo" aria-label="Samir Maia, voltar ao início">SM<span>.</span></a>
 
-            <a href="#inicio" class="logo" aria-label="Samir Maia, voltar ao início">
-                SM<span>.</span>
-            </a>
-
-            <button
-                class="menu-btn"
-                id="menuBtn"
-                aria-label="Abrir menu"
-                aria-expanded="false"
-            >
+            <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
                 ☰
             </button>
 
-            <nav class="nav-links" id="navLinks">
-
+            <nav class="nav-links" id="navLinks" aria-label="Menu principal">
                 <a href="#sobre">Sobre</a>
                 <a href="#processo">Processo</a>
                 <a href="#habilidades">Habilidades</a>
                 <a href="#projetos">Projetos</a>
                 <a href="#servicos">Serviços</a>
-
-                <a href="#contato" class="nav-cta">
-                    Vamos conversar
-                </a>
-
+                <a href="#contato" class="nav-cta">Vamos conversar</a>
             </nav>
-
         </div>
-
     </header>
-
 
     <main>
 
-        <!-- HERO -->
-
         <section class="hero" id="inicio">
-
             <div class="container hero-content">
-
                 <div class="hero-text">
-
-                    <p class="eyebrow">
-                        FRONT-END • BACK-END • WEB
-                    </p>
+                    <p class="eyebrow">Front-end • Back-end • Web</p>
 
                     <h1>
-                        Transformando ideias em
-                        <span>experiências digitais.</span>
+                        Transformo ideias em
+                        <span>experiências digitais que funcionam.</span>
                     </h1>
 
                     <p class="hero-description">
-                        Sou Samir Maia, estudante de Análise e Desenvolvimento
-                        de Sistemas e desenvolvedor em formação, com foco em
-                        criar interfaces modernas, aplicações web funcionais e
-                        soluções digitais que entregam valor real.
+                        Sou Samir Maia, estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor web
+                        em formação, com foco em criar interfaces modernas, aplicações funcionais e soluções
+                        digitais que entregam valor real para pessoas, marcas e negócios.
                     </p>
 
                     <div class="hero-buttons">
-
-                        <a href="#projetos" class="btn primary">
-                            Explorar projetos
-                        </a>
-
-                        <a href="#contato" class="btn secondary">
-                            Solicitar orçamento
-                        </a>
-
+                        <a href="#projetos" class="btn primary">Explorar projetos</a>
+                        <a href="#contato" class="btn secondary">Solicitar orçamento</a>
                     </div>
 
                     <div class="hero-meta">
-                        <span class="status-pill">
-                            Disponível para oportunidades
-                        </span>
+                        <span class="status-pill">Disponível para projetos</span>
 
                         <div class="stack-list" aria-label="Tecnologias principais">
-                            <span>HTML</span>
-                            <span>CSS</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
                             <span>JavaScript</span>
                             <span>Node.js</span>
+                            <span>GitHub</span>
                             <span>Deploy</span>
                         </div>
 
                         <div class="mini-stats" aria-label="Principais diferenciais">
                             <div>
-                                <strong>Projetos</strong>
-                                <span>Disponível</span>
+                                <strong>Sites</strong>
+                                <span>Responsivos</span>
                             </div>
                             <div>
-                                <strong>100%</strong>
-                                <span>Responsivo</span>
+                                <strong>UX</strong>
+                                <span>Focada</span>
                             </div>
                             <div>
-                                <strong>Fast</strong>
-                                <span>Entrega</span>
+                                <strong>Entrega</strong>
+                                <span>Direta</span>
                             </div>
                         </div>
                     </div>
-
                 </div>
 
-
-                <div class="hero-card">
-
+                <div class="hero-card" aria-label="Visual de código do perfil">
                     <div class="code-window">
-
                         <div class="code-top">
                             <span></span>
                             <span></span>
@@ -144,135 +102,85 @@
                         </div>
 
                         <pre><span>const</span> samir = {
-    foco: <span>"Web Development"</span>,
+    foco: <span>"Desenvolvimento web"</span>,
     frontEnd: <span>true</span>,
     backEnd: <span>true</span>,
     deploy: <span>"Online"</span>,
-    objetivo: <span>"Criar soluções"</span>
+    objetivo: <span>"Criar soluções úteis"</span>
 };</pre>
-
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- SOBRE -->
-
         <section class="section" id="sobre">
-
             <div class="container">
-
                 <div class="section-title">
-
-                    <p class="eyebrow">
-                        SOBRE MIM
-                    </p>
-
-                    <h2>
-                        Construindo soluções
-                        <span>com propósito.</span>
-                    </h2>
-
+                    <p class="eyebrow">Sobre mim</p>
+                    <h2>Construindo soluções <span>com clareza e propósito.</span></h2>
                 </div>
 
-
                 <div class="about-grid">
-
                     <div class="about-text">
-
                         <p>
-                            Atualmente estudo Análise e Desenvolvimento de
-                            Sistemas e venho construindo minha trajetória
-                            na área de tecnologia através de projetos
-                            práticos.
+                            Sou estudante de Análise e Desenvolvimento de Sistemas e venho desenvolvendo minha
+                            trajetória na tecnologia por meio de projetos práticos, estudos e desafios reais.
                         </p>
-
                         <p>
-                            Meu interesse está principalmente no desenvolvimento
-                            de aplicações web, criação de interfaces, APIs,
-                            bancos de dados e soluções digitais.
+                            Minha atuação está centrada em desenvolvimento web, com atenção para interfaces bem
+                            estruturadas, experiências intuitivas, lógica de aplicação e boa entrega digital.
                         </p>
-
                         <p>
-                            Gosto de transformar uma ideia em algo que realmente
-                            possa ser utilizado — desde a criação da interface
-                            até a implementação e publicação do projeto.
+                            Gosto de transformar ideias em soluções que realmente funcionem na prática, desde a
+                            definição da proposta até a publicação e manutenção do projeto.
                         </p>
-
                     </div>
 
-
                     <div class="about-highlight">
-
                         <div class="highlight">
                             <strong>01</strong>
                             <span>Front-end</span>
                         </div>
-
                         <div class="highlight">
                             <strong>02</strong>
                             <span>Back-end</span>
                         </div>
-
                         <div class="highlight">
                             <strong>03</strong>
-                            <span>Deploy & Integração</span>
+                            <span>APIs</span>
                         </div>
-
                         <div class="highlight">
                             <strong>04</strong>
-                            <span>Projetos Web</span>
+                            <span>Deploy</span>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- PROCESSO -->
-
         <section class="section process-section" id="processo">
-
             <div class="container">
-
                 <div class="section-title">
-
-                    <p class="eyebrow">
-                        COMO TRABALHO
-                    </p>
-
-                    <h2>
-                        Um processo simples,
-                        <span>objetivo e eficiente.</span>
-                    </h2>
-
+                    <p class="eyebrow">Como trabalho</p>
+                    <h2>Um processo simples, <span>objetivo e eficiente.</span></h2>
                 </div>
 
                 <div class="process-grid">
-
                     <div class="process-card">
                         <span class="process-number">01</span>
                         <h3>Diagnóstico</h3>
                         <p>
-                            Entendo sua proposta, público e objetivo para
-                            transformar a ideia em uma solução clara.
+                            Entendo a proposta, o público e os objetivos para transformar a ideia em uma solução
+                            clara e funcional.
                         </p>
                     </div>
 
                     <div class="process-card">
                         <span class="process-number">02</span>
-                        <h3>Construção</h3>
+                        <h3>Desenvolvimento</h3>
                         <p>
-                            Desenvolvo a interface, a estrutura e a lógica com
-                            foco em desempenho, boa experiência e responsividade.
+                            Crio a estrutura, a interface e a lógica com foco em desempenho, usabilidade e
+                            responsividade.
                         </p>
                     </div>
 
@@ -280,456 +188,190 @@
                         <span class="process-number">03</span>
                         <h3>Entrega</h3>
                         <p>
-                            Publico o projeto e deixo tudo pronto para que ele
-                            esteja acessível e funcional no ambiente digital.
+                            Publiquem o projeto em ambiente digital e deixo tudo pronto para uso, acesso e evolução.
                         </p>
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- HABILIDADES -->
-
         <section class="section dark-section" id="habilidades">
-
             <div class="container">
-
                 <div class="section-title">
-
-                    <p class="eyebrow">
-                        INTERESSES & TECNOLOGIAS
-                    </p>
-
-                    <h2>
-                        O que estou
-                        <span>aprendendo e desenvolvendo.</span>
-                    </h2>
-
+                    <p class="eyebrow">Tecnologias e interesses</p>
+                    <h2>O que estou <span>aprendendo e aplicando.</span></h2>
                 </div>
 
-
                 <div class="skills-grid">
-
                     <div class="skill-card">
                         <span class="skill-number">01</span>
-
                         <h3>Front-end</h3>
-
-                        <p>
-                            Criação de interfaces responsivas e experiências
-                            web utilizando HTML, CSS e JavaScript.
-                        </p>
+                        <p>Interfaces responsivas, layout moderno, boa hierarquia visual e experiência fluida.</p>
                     </div>
-
 
                     <div class="skill-card">
                         <span class="skill-number">02</span>
-
-                        <h3>Back-end</h3>
-
-                        <p>
-                            Desenvolvimento de aplicações, lógica,
-                            APIs REST e integração com bancos de dados.
-                        </p>
+                        <h3>JavaScript</h3>
+                        <p>Interações, dinamicidade, lógica de interface e melhorias de usabilidade em páginas web.</p>
                     </div>
-
 
                     <div class="skill-card">
                         <span class="skill-number">03</span>
-
-                        <h3>Deploy & Integração</h3>
-
-                        <p>
-                            Interesse em publicação, infraestrutura básica,
-                            integração de aplicações e entrega digital.
-                        </p>
+                        <h3>Back-end</h3>
+                        <p>Desenvolvimento de lógica, APIs e comunicação com bancos de dados em aplicações web.</p>
                     </div>
-
 
                     <div class="skill-card">
                         <span class="skill-number">04</span>
-
-                        <h3>Banco de Dados</h3>
-
-                        <p>
-                            SQL, PostgreSQL, organização de dados e
-                            integração com aplicações.
-                        </p>
+                        <h3>APIs REST</h3>
+                        <p>Criação e consumo de serviços para conectar aplicações, dados e funcionalidades.</p>
                     </div>
-
 
                     <div class="skill-card">
                         <span class="skill-number">05</span>
-
-                        <h3>APIs REST</h3>
-
-                        <p>
-                            Criação e consumo de APIs para conectar
-                            aplicações e serviços.
-                        </p>
+                        <h3>Banco de Dados</h3>
+                        <p>Estruturação, organização e manipulação de dados com foco em aplicações reais.</p>
                     </div>
-
 
                     <div class="skill-card">
                         <span class="skill-number">06</span>
-
                         <h3>Git & GitHub</h3>
-
-                        <p>
-                            Versionamento de projetos, organização de código
-                            e publicação de aplicações.
-                        </p>
+                        <p>Controle de versão, organização de projetos e publicação de soluções digitais.</p>
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- PROJETOS -->
-
         <section class="section" id="projetos">
-
             <div class="container">
-
                 <div class="section-title">
-
-                    <p class="eyebrow">
-                        PROJETOS
-                    </p>
-
-                    <h2>
-                        Projetos que
-                        <span>já coloquei em prática.</span>
-                    </h2>
-
+                    <p class="eyebrow">Projetos</p>
+                    <h2>Trabalhos que <span>já foram colocados em prática.</span></h2>
                 </div>
 
-
                 <div class="projects-grid">
-
-
-                    <!-- PROJETO VICTOR -->
-
                     <article class="project-card">
-
-                        <div class="project-image">
-                            <span>WEB</span>
-                        </div>
-
+                        <div class="project-image"><span>WEB</span></div>
                         <div class="project-content">
-
-                            <p class="project-type">
-                                SITE PROFISSIONAL
-                            </p>
-
-                            <h3>
-                                Victor Benevides
-                            </h3>
-
+                            <p class="project-type">Site profissional</p>
+                            <h3>Victor Benevides</h3>
                             <p>
-                                Site profissional desenvolvido para nutricionista,
-                                com apresentação dos serviços, informações
-                                profissionais e chamadas para agendamento.
+                                Site institucional focado em presença digital, comunicação clara e conversão de
+                                visitantes em contato e agendamento.
                             </p>
-
                             <div class="tags">
-
                                 <span>HTML</span>
                                 <span>CSS</span>
                                 <span>JavaScript</span>
                                 <span>Deploy</span>
-
                             </div>
-
-                            <a
-                                href="https://victorbenevidesnutri.netlify.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="project-link"
-                            >
-                                Ver projeto →
-                            </a>
-
+                            <a href="https://victorbenevidesnutri.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">Ver projeto →</a>
                         </div>
-
                     </article>
 
-
-                    <!-- PROJETO BACK-END -->
-
                     <article class="project-card">
-
-                        <div class="project-image">
-                            <span>API</span>
-                        </div>
-
+                        <div class="project-image"><span>API</span></div>
                         <div class="project-content">
-
-                            <p class="project-type">
-                                PROJETO ACADÊMICO
-                            </p>
-
-                            <h3>
-                                APIs e Backend
-                            </h3>
-
+                            <p class="project-type">Projeto acadêmico</p>
+                            <h3>Back-end e Integrations</h3>
                             <p>
-                                Projetos acadêmicos envolvendo Node.js,
-                                Express, APIs REST, banco de dados e
-                                integração entre aplicações.
+                                Desenvolvimento de soluções com Node.js, Express e APIs REST para conectar lógica,
+                                dados e operações entre aplicações.
                             </p>
-
                             <div class="tags">
-
                                 <span>Node.js</span>
                                 <span>Express</span>
                                 <span>REST</span>
                                 <span>SQL</span>
-
                             </div>
-
                         </div>
-
                     </article>
-
-
-                    <!-- PROJETO DEPLOY -->
 
                     <article class="project-card">
-
-                        <div class="project-image">
-                            <span>DEPLOY</span>
-                        </div>
-
+                        <div class="project-image"><span>DEPLOY</span></div>
                         <div class="project-content">
-
-                            <p class="project-type">
-                                DEPLOY
-                            </p>
-
-                            <h3>
-                                Projetos de publicação
-                            </h3>
-
+                            <p class="project-type">Publicação</p>
+                            <h3>Projetos em produção</h3>
                             <p>
-                                Experimentos acadêmicos envolvendo servidores,
-                                aplicações web, deploy e entrega de projetos
-                                para acesso online.
+                                Experimentos e entregas digitais com publicação online, infraestrutura básica e
+                                atenção para acessibilidade e performance.
                             </p>
-
                             <div class="tags">
-
+                                <span>Git</span>
                                 <span>Linux</span>
                                 <span>Deploy</span>
-                                <span>Git</span>
                                 <span>Infra</span>
-
                             </div>
-
                         </div>
-
                     </article>
-
-
                 </div>
-
             </div>
-
         </section>
-
-
-        <!-- SERVIÇOS -->
 
         <section class="section services-section" id="servicos">
-
             <div class="container">
-
                 <div class="section-title">
-
-                    <p class="eyebrow">
-                        O QUE POSSO FAZER
-                    </p>
-
-                    <h2>
-                        Sites que ajudam
-                        <span>seu negócio a crescer.</span>
-                    </h2>
-
+                    <p class="eyebrow">O que posso fazer</p>
+                    <h2>Sites que ajudam <span>seu negócio a crescer.</span></h2>
                     <p>
-                        Além dos meus projetos acadêmicos, também desenvolvo
-                        soluções digitais para profissionais e pequenos negócios
-                        que precisam de presença online com clareza e impacto.
+                        Desenvolvo soluções digitais para profissionais e pequenos negócios que precisam de uma
+                        presença online clara, funcional e bem posicionada no mercado.
                     </p>
-
                 </div>
-
 
                 <div class="services-grid">
-
-
                     <div class="service-card">
-
-                        <div class="service-icon">
-                            &lt;/&gt;
-                        </div>
-
-                        <h3>
-                            Sites profissionais
-                        </h3>
-
-                        <p>
-                            Sites modernos, responsivos e personalizados
-                            para apresentar seu trabalho ou negócio.
-                        </p>
-
+                        <div class="service-icon">&lt;/&gt;</div>
+                        <h3>Sites profissionais</h3>
+                        <p>Estruturas modernas, responsivas e pensadas para transmitir confiança e valor.</p>
                     </div>
 
-
                     <div class="service-card">
-
-                        <div class="service-icon">
-                            ↗
-                        </div>
-
-                        <h3>
-                            Página para Instagram
-                        </h3>
-
-                        <p>
-                            Uma página própria para colocar na bio do Instagram
-                            e reunir informações, serviços e contatos.
-                        </p>
-
+                        <div class="service-icon">↗</div>
+                        <h3>Página para Instagram</h3>
+                        <p>Uma página simples e funcional para apresentar serviços, contatos e ações importantes.</p>
                     </div>
 
-
                     <div class="service-card">
-
-                        <div class="service-icon">
-                            ⚡
-                        </div>
-
-                        <h3>
-                            Landing Pages
-                        </h3>
-
-                        <p>
-                            Páginas focadas em apresentar produtos,
-                            serviços ou campanhas com chamadas para ação.
-                        </p>
-
+                        <div class="service-icon">⚡</div>
+                        <h3>Landing pages</h3>
+                        <p>Páginas com foco em conversão, clareza e chamadas decisivas para ação.</p>
                     </div>
 
-
                     <div class="service-card">
-
-                        <div class="service-icon">
-                            ☁
-                        </div>
-
-                        <h3>
-                            Publicação e Deploy
-                        </h3>
-
-                        <p>
-                            Coloco seu projeto online para que ele possa
-                            ser acessado através de um link.
-                        </p>
-
+                        <div class="service-icon">☁</div>
+                        <h3>Publicação e deploy</h3>
+                        <p>Levo o projeto para o ar para que ele esteja acessível de forma rápida e segura.</p>
                     </div>
-
                 </div>
-
             </div>
-
         </section>
-
-
-        <!-- CTA -->
 
         <section class="cta" id="contato">
-
             <div class="container cta-content">
-
-                <p class="eyebrow">
-                    VAMOS CRIAR ALGO BEM LEGAL?
-                </p>
-
-                <h2>
-                    Seu próximo projeto
-                    <span>pode começar agora.</span>
-                </h2>
-
+                <p class="eyebrow">Vamos criar algo incrível?</p>
+                <h2>Seu próximo projeto <span>pode começar agora.</span></h2>
                 <p>
-                    Precisa de um site profissional, funcional e com cara de
-                    marca? Posso ajudar a transformar sua ideia em uma presença
-                    digital forte.
+                    Precisa de um site profissional, funcional e com cara de marca? Posso ajudar a transformar sua
+                    ideia em uma presença digital clara, forte e bem pensada.
                 </p>
-
-                <a
-                    href="https://wa.me/5585996294371?text=Ol%C3%A1%2C%20Samir!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn whatsapp"
-                >
-                    Falar comigo no WhatsApp
-                </a>
-
+                <a href="https://wa.me/5585996294371?text=Ol%C3%A1%2C%20Samir!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer" class="btn whatsapp">Falar comigo no WhatsApp</a>
             </div>
-
         </section>
-
     </main>
 
-
-    <!-- FOOTER -->
-
     <footer class="footer">
-
         <div class="container footer-content">
-
-            <p>
-                © <span id="currentYear"></span> Samir Maia.
-            </p>
+            <p>© <span id="currentYear"></span> Samir Maia.</p>
 
             <div class="social-links">
-
-                <a
-                    class="social-link"
-                    href="https://github.com/SamirMaia91"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Abrir perfil do GitHub"
-                >
-                    GitHub
-                </a>
-
-                <a
-                    class="social-link"
-                    href="https://www.instagram.com/samirmaiafs_/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Abrir perfil do Instagram"
-                >
-                    Instagram
-                </a>
-
+                <a class="social-link" href="https://github.com/SamirMaia91" target="_blank" rel="noopener noreferrer" aria-label="Abrir perfil do GitHub">GitHub</a>
+                <a class="social-link" href="https://www.instagram.com/samirmaiafs_/" target="_blank" rel="noopener noreferrer" aria-label="Abrir perfil do Instagram">Instagram</a>
             </div>
-
         </div>
-
     </footer>
 
-
     <script src="script.js"></script>
-
 </body>
 
 </html>
