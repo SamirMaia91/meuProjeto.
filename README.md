@@ -4,6 +4,11 @@ Portfólio pessoal desenvolvido para apresentar minha trajetória como estudante
 
 O projeto também funciona como uma **vitrine profissional**, permitindo que potenciais clientes conheçam meu trabalho e entrem em contato para criação de sites e soluções digitais.
 
+## 🌐 Portfólio
+
+🔗 **Acesse meu portfólio:**
+https://samirmaia91.github.io/meuProjeto/
+
 ## 🚀 Sobre o projeto
 
 Este site foi desenvolvido com foco em:
@@ -85,7 +90,7 @@ Atualmente busco transformar conhecimentos em projetos reais, aprimorando minhas
 https://github.com/SamirMaia91
 
 **Instagram:**
-Adicione aqui seu Instagram
+https://www.instagram.com/samirmaiafs_/
 
 **LinkedIn:**
 Adicione aqui seu LinkedIn
