@@ -6,8 +6,7 @@ O projeto também funciona como uma **vitrine profissional**, permitindo que pot
 
 ## 🌐 Portfólio
 
-🔗 **Acesse meu portfólio:**
-https://samirmaia91.github.io/meuProjeto/
+🔗 **Acesse meu portfólio:** [Meu Portfólio](https://samirmaia91.github.io/meuProjeto./)
 
 ## 🚀 Sobre o projeto
 
