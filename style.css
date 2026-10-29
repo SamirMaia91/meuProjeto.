@@ -216,7 +216,7 @@ img {
     color: var(--muted);
     font-size: 14px;
     font-weight: 500;
-    transition: 0.25s ease;
+    transition: color 220ms ease;
     position: relative;
 }
 
@@ -230,7 +230,7 @@ img {
     background: linear-gradient(90deg, transparent, var(--primary), transparent);
     transform: scaleX(0);
     transform-origin: center;
-    transition: transform 0.25s ease;
+    transition: transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .nav-links a:hover {
@@ -441,7 +441,7 @@ img {
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 0.03em;
-    transition: 0.25s ease;
+    transition: transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 300ms ease, border-color 220ms ease, background-color 220ms ease;
     position: relative;
     overflow: hidden;
     box-shadow: 0 18px 30px rgba(2, 9, 15, 0.18);
@@ -501,7 +501,7 @@ img {
     overflow: hidden;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3), 0 0 36px rgba(103, 240, 207, 0.08);
     position: relative;
-    animation: floatCard 5s ease-in-out infinite;
+    animation: floatCard 7s ease-in-out infinite;
 }
 
 @keyframes floatCard {
@@ -672,7 +672,7 @@ pre span {
     background: linear-gradient(180deg, rgba(17, 26, 37, 0.9), rgba(11, 19, 28, 0.96));
     border: 1px solid rgba(103, 240, 207, 0.12);
     border-radius: 18px;
-    transition: 0.3s ease;
+    transition: transform 350ms cubic-bezier(0.2, 0.8, 0.2, 1), border-color 250ms ease, box-shadow 350ms ease;
     box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.02);
     position: relative;
     overflow: hidden;
@@ -727,7 +727,7 @@ pre span {
     background: linear-gradient(180deg, rgba(17, 26, 37, 0.9), rgba(11, 19, 28, 0.96));
     border: 1px solid rgba(103, 240, 207, 0.12);
     border-radius: 18px;
-    transition: 0.3s ease;
+    transition: transform 350ms cubic-bezier(0.2, 0.8, 0.2, 1), border-color 250ms ease, box-shadow 350ms ease;
     box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.02);
     position: relative;
     overflow: hidden;
@@ -773,7 +773,7 @@ pre span {
     border: 1px solid rgba(103, 240, 207, 0.12);
     border-radius: 20px;
     overflow: hidden;
-    transition: 0.3s ease;
+    transition: transform 400ms cubic-bezier(0.2, 0.8, 0.2, 1), border-color 250ms ease, box-shadow 400ms ease;
     box-shadow: 0 22px 40px rgba(0, 0, 0, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.03);
     position: relative;
 }
@@ -793,6 +793,16 @@ pre span {
     border-bottom: 1px solid var(--line);
     letter-spacing: 0.08em;
     box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+}
+
+.project-image span {
+    transition: transform 500ms cubic-bezier(0.2, 0.8, 0.2, 1), letter-spacing 500ms ease;
+}
+
+.project-card:hover .project-image span {
+    transform: scale(1.08);
+    letter-spacing: 0.14em;
 }
 
 .project-content {
@@ -869,7 +879,7 @@ pre span {
     background: linear-gradient(180deg, rgba(17, 27, 38, 0.9), rgba(10, 18, 27, 0.96));
     border: 1px solid rgba(103, 240, 207, 0.12);
     border-radius: 18px;
-    transition: 0.3s ease;
+    transition: transform 350ms cubic-bezier(0.2, 0.8, 0.2, 1), border-color 250ms ease, box-shadow 350ms ease;
     position: relative;
     overflow: hidden;
     box-shadow: 0 18px 36px rgba(0, 0, 0, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.02);
@@ -985,7 +995,7 @@ pre span {
     background: linear-gradient(135deg, rgba(103, 240, 207, 0.06), rgba(116, 185, 255, 0.05));
     color: var(--muted);
     font-weight: 600;
-    transition: 0.25s ease;
+    transition: transform 250ms cubic-bezier(0.2, 0.8, 0.2, 1), color 220ms ease, border-color 220ms ease, background-color 220ms ease, box-shadow 250ms ease;
     box-shadow: inset 0 0 16px rgba(103, 240, 207, 0.04);
 }
 
@@ -1042,19 +1052,26 @@ pre span {
         position: absolute;
         top: calc(100% + 10px);
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -8px);
         width: min(92vw, 360px);
-        display: none;
+        display: flex;
         flex-direction: column;
         padding: 22px 18px;
         background: rgba(7, 20, 29, 0.96);
         border: 1px solid var(--line);
         border-radius: 16px;
         box-shadow: var(--shadow);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 220ms ease, transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1), visibility 220ms;
     }
 
     .nav-links.active {
-        display: flex;
+        transform: translate(-50%, 0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
     }
 
     .nav-links a {
@@ -1115,6 +1132,71 @@ pre span {
     }
 }
 
+@keyframes heroEnter {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes revealIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.hero-text > .eyebrow,
+.hero h1,
+.hero-description,
+.hero-buttons,
+.hero-meta,
+.hero-card {
+    animation: heroEnter 750ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+.hero h1 {
+    animation-delay: 80ms;
+}
+
+.hero-description {
+    animation-delay: 160ms;
+}
+
+.hero-buttons {
+    animation-delay: 240ms;
+}
+
+.hero-meta {
+    animation-delay: 320ms;
+}
+
+.hero-card {
+    animation-delay: 180ms;
+}
+
+.reveal.is-visible {
+    animation: revealIn 700ms cubic-bezier(0.2, 0.75, 0.25, 1) var(--reveal-delay, 0ms) both;
+}
+
+.reveal {
+    opacity: 0;
+    translate: 0 24px;
+    transition: translate 700ms cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+.reveal.is-visible {
+    translate: 0 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -1125,5 +1207,10 @@ pre span {
     *::after {
         animation: none !important;
         transition: none !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        translate: none;
     }
 }

@@ -62,23 +62,27 @@ if (currentYear) {
     currentYear.textContent = new Date().getFullYear();
 }
 
-const elements = document.querySelectorAll(".skill-card, .project-card, .service-card, .highlight");
-
-const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
-            }
-        });
-    },
-    { threshold: 0.1 }
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const revealElements = document.querySelectorAll(
+    ".section-title, .about-text, .process-card, .skill-card, .project-card, .service-card, .highlight"
 );
 
-elements.forEach((element) => {
-    element.style.opacity = "0";
-    element.style.transform = "translateY(20px)";
-    element.style.transition = "0.6s ease";
-    observer.observe(element);
-});
+if (!prefersReducedMotion && "IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            });
+        },
+        { threshold: 0.14, rootMargin: "0px 0px -32px 0px" }
+    );
+
+    revealElements.forEach((element, index) => {
+        element.classList.add("reveal");
+        element.style.setProperty("--reveal-delay", `${Math.min(index % 4, 3) * 80}ms`);
+        revealObserver.observe(element);
+    });
+}
